@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Conversão de Bases Numéricas</title>
+        <script src="conversaoBases.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>34SYM4TH</h1>
+        </header>
+
+        <nav>
+            | <a href="#">Página Inicial</a> |
+            <a href="#">Geometria Plana</a> |
+            <a href="#">Geometria Espacial</a> |
+            <a href="#">Contas Básicas</a> |
+            <a href="#">Conversões Numéricas</a> |
+            <a href="#">Conversão de unidades</a> |
+            <a href="#">Equações</a> |
+            <a href="#">Sobre nós</a> |
+            <a href="#">Contato</a> |
+        </nav>
+
+        <h2>Conversão de Bases Numéricas</h2> 
+
+        <hr/>
+
+        <article>
+            <section>
+                    <form>
+                        <table>
+                            <tr>
+                                <td colspan="5" style="text-align: left"><ul>
+                                    <li>Selecione a base de origem:</li>
+                                </ul></td>
+                            </tr>
+
+                            <tr>
+                                <td>Decimal</td>
+                                <td>Binária</td>
+                                <td>Hexadecimal</td>
+                                <td>Octal</td>
+                                <td>Valor:</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="radio" name="decimalPara" value="Decimal"/></td>
+                                <td><input type="radio" name="binariaPara" value="Binária"/></td>
+                                <td><input type="radio" name="hexadecimalPara" value="Hexadecimal"/></td>
+                                <td><input type="radio" name="octalPara" value="Octal"/></td>
+                                <td><input type="text" placeholder="Valor" name="valor" required/></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="5"></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="5" style="text-align: left"><ul>
+                                    <li>Selecione a base de destino:</li>
+                                </ul></td>
+                            </tr>
+
+                            <tr>
+                                <td>Decimal</td>
+                                <td>Binária</td>
+                                <td>Hexadecimal</td>
+                                <td>Octal</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="radio" name="decimal" value="Decimal"/></td>
+                                <td><input type="radio" name="binaria" value="Binária"/></td>
+                                <td><input type="radio" name="hexadecimal" value="Hexadecimal"/></td>
+                                <td><input type="radio" name="octal" value="Octal"/></td>
+                                <td><input type="button" value="Calcular!" onclick="converter(valor)"/></td>
+                            </tr>
+                        </table>
+                    </form>
+            </section>
+
+            <section>
+                <h3>Resultado: </h3>
+                <p id="resultado"></p>  
+                <p id="explicacao"></p>          
+            </section>
+
+            <hr/>
+
+            <footer>
+                Copyright &copy; 2019. All rights reserved.
+            </footer>
+
+        </article>
+    </body>
+</html>

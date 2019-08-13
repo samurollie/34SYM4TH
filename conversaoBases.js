@@ -1,38 +1,34 @@
-function converter () {
+function converter() {
     var numero = document.forms[0].valor.value;
     if (document.forms[0].decimalPara.checked) {
-        parseInt (numero);
+        parseInt(numero);
         decimal(numero);
-    }
-    else if (document.forms[0].binariaPara.checked) {
-        parseInt (numero);        
+    } else if (document.forms[0].binariaPara.checked) {
+        parseInt(numero);
         binaria(numero);
-    }
-    else if (document.forms[0].hexadecimalPara.checked) {
+    } else if (document.forms[0].hexadecimalPara.checked) {
         hexadecimal(numero);
-    }
-    else if (document.forms[0].octalPara.checked) {
-        parseInt (numero);        
+    } else if (document.forms[0].octalPara.checked) {
+        parseInt(numero);
         octal(numero);
-    }
-    else {
+    } else {
         alert("Selecione a base numérica de origem!");
     }
     document.getElementById("explicacao").innerHTML = ("EXPLICAÇÃO DO CALCULO")
 }
 
-function decimal (numero) {
-    
-}
-
-function binaria (numero) {
+function decimal(numero) {
 
 }
 
-function hexadecimal (numero) {
+function binaria(numero) {
 
 }
 
-function octal (numero) {
+function hexadecimal(numero) {
+
+}
+
+function octal(numero) {
 
 }

@@ -1,0 +1,11 @@
+form{
+    text-align:center;
+}
+.botaoEnviar{
+    width: 350px;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #FCC302;
+    font-size: 18px;
+}

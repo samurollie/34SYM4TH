@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Conversão de Bases Numéricas</title>
-    <script src="nomedoarquivo.js"></script> <!-- Insira aqui o JavaScript -->
+    <title>Conversão de Bases Numéricas - Distâncias</title>
+    <script src="distancia.js"></script> <!-- Insira aqui o JavaScript -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--NÃO REMOVA! ISSO AQUI É PARA INCLUIR O CSS-->
 </head>
@@ -17,7 +17,7 @@
     </header>
     <nav>
         <!-- A área de navegação (ao longo que os arquivos forem sendo criados, a # vai ser substituida pelo nome do arquivo) -->
-        | <a href="#">Página Inicial</a> |
+        | <a href="home_page.html">Página Inicial</a> |
         <a href="geometriaPlana.html">Geometria Plana</a> |
         <a href="#">Geometria Espacial</a> |
         <a href="contasbasicas.html">Contas Básicas</a> |
@@ -60,18 +60,70 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="KmPara" required /></td>
-                <td><input type="radio" name="HmPara" required /></td>
-                <td><input type="radio" name="DamPara" required /></td>
-                <td><input type="radio" name="MPara" required /></td>
-                <td><input type="radio" name="CmPara" required /></td>
-                <td><input type="radio" name="DmPara" required /></td>
-                <td><input type="radio" name="MmPara" required /></td>
-                <td><input type="text" name="valor" placeholder="Valor" /></td>
+                <td><input type="radio" name="KmPara" /></td>
+                <td><input type="radio" name="HmPara" /></td>
+                <td><input type="radio" name="DamPara" /></td>
+                <td><input type="radio" name="MPara" /></td>
+                <td><input type="radio" name="DmPara" /></td>
+                <td><input type="radio" name="CmPara" /></td>
+                <td><input type="radio" name="MmPara" /></td>
+                <td><input type="text" name="valor" placeholder="Valor" required /></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Km</p>
+                </td>
+                <td>
+                    <p>Hm</p>
+                </td>
+                <td>
+                    <p>Dam</p>
+                </td>
+                <td>
+                    <p>M</p>
+                </td>
+                <td>
+                    <p>Cm</p>
+                </td>
+                <td>
+                    <p>Dm</p>
+                </td>
+                <td>
+                    <p>Mm</p>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="Km" /></td>
+                <td><input type="radio" name="Hm" /></td>
+                <td><input type="radio" name="Dam" /></td>
+                <td><input type="radio" name="Metros" /></td>
+                <td><input type="radio" name="Cm" /></td>
+                <td><input type="radio" name="Dm" /></td>
+                <td><input type="radio" name="Mm" /></td>
+                <td><input type="button" value="Clique aqui para converter" onclick="converter(valor)" /></td>
             </tr>
         </table>
     </form>
     <hr />
+    <p id="resultado"></p>
+    <p>A transformação de unidades de medida de comprimento é baseada na seguinte imagem:</p>
+    <img src="comprimento.jpg" />
+    <p>Onde, de acordo com a unidade de origem, deve-se "mover a vírgula" da esquerda para a direita.</p>
+    <p>Por exemplo, para converter 1,9872 metros em centímetros, a vírgula deve ser "deslocada" 2 casas para a direita, ou seja, multiplicar o número original por 100. 
+    </p>
+    <p><i>Exemplos:</i></p>
+    1,9872 m = 198,72 cm.</br>
+    5,8 cm = 58 mm. </br>
+    1 Km = 1000 m. </br>
+    </br>
+    <p>Para realisar o contrário, a vírgula deve ser deslocada para a esquerda, ou seja, deve ser realizada uma divisão.</p>
+    <p><i>Exemplos:</i></p>
+    198,72 cm = 1,9872 m.</br>
+    58 mm = 5,8 cm.</br>
+    1000 mm = 1 m.</br>
+    </br>
     <footer>
         Copyright &copy; 2019. All rights reserved.
     </footer>

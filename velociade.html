@@ -29,7 +29,83 @@
     </nav>
     <h2>Aqui vai o titulo da pagina</h2>
     <hr />
-    <p>Insira aqui o conteúdo da pagina</p>
+    <form>
+            <table>
+                <tr>
+                    <td>
+                        <p>Km</p>
+                    </td>
+                    <td>
+                        <p>Hm</p>
+                    </td>
+                    <td>
+                        <p>Dam</p>
+                    </td>
+                    <td>
+                        <p>M</p>
+                    </td>
+                    <td>
+                        <p>Cm</p>
+                    </td>
+                    <td>
+                        <p>Dm</p>
+                    </td>
+                    <td>
+                        <p>Mm</p>
+                    </td>
+                    <td>
+                        <p>Valor:</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="KmPara" /></td>
+                    <td><input type="radio" name="HmPara" /></td>
+                    <td><input type="radio" name="DamPara" /></td>
+                    <td><input type="radio" name="MPara" /></td>
+                    <td><input type="radio" name="DmPara" /></td>
+                    <td><input type="radio" name="CmPara" /></td>
+                    <td><input type="radio" name="MmPara" /></td>
+                    <td><input type="text" name="valor" placeholder="Valor" required /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Km</p>
+                    </td>
+                    <td>
+                        <p>Hm</p>
+                    </td>
+                    <td>
+                        <p>Dam</p>
+                    </td>
+                    <td>
+                        <p>M</p>
+                    </td>
+                    <td>
+                        <p>Cm</p>
+                    </td>
+                    <td>
+                        <p>Dm</p>
+                    </td>
+                    <td>
+                        <p>Mm</p>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="Km" /></td>
+                    <td><input type="radio" name="Hm" /></td>
+                    <td><input type="radio" name="Dam" /></td>
+                    <td><input type="radio" name="Metros" /></td>
+                    <td><input type="radio" name="Cm" /></td>
+                    <td><input type="radio" name="Dm" /></td>
+                    <td><input type="radio" name="Mm" /></td>
+                    <td><input type="button" value="Clique aqui para converter" onclick="converter(valor)" /></td>
+                </tr>
+            </table>
+        </form>
+        <hr />
+        <p id="resultado"></p>
     <hr />
     <footer>
         Copyright &copy; 2019. All rights reserved.

@@ -28,7 +28,7 @@
         <a href="#">Contato</a> |
     </nav>
 
-    <h2>Distâncias</h2>
+    <h2>Conversão de unidades - Distâncias</h2>
     <hr />
 
     <form>
@@ -47,10 +47,10 @@
                     <p>M</p>
                 </td>
                 <td>
-                    <p>Cm</p>
+                    <p>Dm</p>
                 </td>
                 <td>
-                    <p>Dm</p>
+                    <p>Cm</p>
                 </td>
                 <td>
                     <p>Mm</p>
@@ -60,13 +60,13 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="KmPara" /></td>
-                <td><input type="radio" name="HmPara" /></td>
-                <td><input type="radio" name="DamPara" /></td>
-                <td><input type="radio" name="MPara" /></td>
-                <td><input type="radio" name="DmPara" /></td>
-                <td><input type="radio" name="CmPara" /></td>
-                <td><input type="radio" name="MmPara" /></td>
+                <td><input type="radio" name="origin" value="Km" /></td>
+                <td><input type="radio" name="origin" value="Hm" /></td>
+                <td><input type="radio" name="origin" value="Dam" /></td>
+                <td><input type="radio" name="origin" value="M" /></td>
+                <td><input type="radio" name="origin" value="Dm" /></td>
+                <td><input type="radio" name="origin" value="Cm" /></td>
+                <td><input type="radio" name="origin" value="Mm" /></td>
                 <td><input type="text" name="valor" placeholder="Valor" required /></td>
             </tr>
             <tr>
@@ -83,25 +83,25 @@
                     <p>M</p>
                 </td>
                 <td>
-                    <p>Cm</p>
+                    <p>Dm</p>
                 </td>
                 <td>
-                    <p>Dm</p>
+                    <p>Cm</p>
                 </td>
                 <td>
                     <p>Mm</p>
                 </td>
                 <td>
                 </td>
-            </tr>
+            </tr> 
             <tr>
-                <td><input type="radio" name="Km" /></td>
-                <td><input type="radio" name="Hm" /></td>
-                <td><input type="radio" name="Dam" /></td>
-                <td><input type="radio" name="Metros" /></td>
-                <td><input type="radio" name="Cm" /></td>
-                <td><input type="radio" name="Dm" /></td>
-                <td><input type="radio" name="Mm" /></td>
+                <td><input type="radio" name="destiny" value="Km" /></td>
+                <td><input type="radio" name="destiny" value="Hm" /></td>
+                <td><input type="radio" name="destiny" value="Dam" /></td>
+                <td><input type="radio" name="destiny" value="M" /></td>
+                <td><input type="radio" name="destiny" value="Dm" /></td>
+                <td><input type="radio" name="destiny" value="Cm" /></td>
+                <td><input type="radio" name="destiny" value="Mm" /></td>
                 <td><input type="button" value="Clique aqui para converter" onclick="converter(valor)" /></td>
             </tr>
         </table>
@@ -111,14 +111,16 @@
     <p>A transformação de unidades de medida de comprimento é baseada na seguinte imagem:</p>
     <img src="comprimento.jpg" />
     <p>Onde, de acordo com a unidade de origem, deve-se "mover a vírgula" da esquerda para a direita.</p>
-    <p>Por exemplo, para converter 1,9872 metros em centímetros, a vírgula deve ser "deslocada" 2 casas para a direita, ou seja, multiplicar o número original por 100. 
+    <p>Por exemplo, para converter 1,9872 metros em centímetros, a vírgula deve ser "deslocada" 2 casas para a direita,
+        ou seja, multiplicar o número original por 100.
     </p>
     <p><i>Exemplos:</i></p>
     1,9872 m = 198,72 cm.</br>
     5,8 cm = 58 mm. </br>
     1 Km = 1000 m. </br>
     </br>
-    <p>Para realisar o contrário, a vírgula deve ser deslocada para a esquerda, ou seja, deve ser realizada uma divisão.</p>
+    <p>Para realisar o contrário, a vírgula deve ser deslocada para a esquerda, ou seja, deve ser realizada uma divisão.
+    </p>
     <p><i>Exemplos:</i></p>
     198,72 cm = 1,9872 m.</br>
     58 mm = 5,8 cm.</br>

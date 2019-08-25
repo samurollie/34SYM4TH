@@ -1,200 +1,49 @@
-resultado = document.getElementById("resultado");
-
-deKM = document.forms[0].KmPara.value;
-deHM = document.forms[0].HmPara.value;
-deDaM = document.forms[0].DamPara.value;
-deM = document.forms[0].MPara.value;
-deDM = document.forms[0].DmPara.value;
-deCM = document.forms[0].CmPara.value;
-deMM = document.forms[0].MmPara.value;
-
-paraKM = document.forms[0].Km.value;
-paraHM = document.forms[0].Hm.value;
-paraDaM = document.forms[0].Dam.value;
-paraM = document.forms[0].Metros.value;
-paraDM = document.forms[0].Dm.value;
-paraCM = document.forms[0].Cm.value;
-paraMM = document.forms[0].Mm.value;
-
 function converter() {
+    resultado = document.getElementById("resultado");
+    origin = document.forms[0].origin.value;
+    destiny = document.forms[0].origin.value;
+    // alert ("origin = " + origin);
     var num = parseFloat(document.forms[0].valor.value);
+    switch (origin) {
+        case "Km":
+            km(num);
+            break;
+        case "Hm":
 
-    if (deKM) {
-        resultado.innerHTML = (num + " Km é igual a ");
-        km(num);
-    } else if (deHM) {
+        case "Dam":
 
-    } else if (deDaM) {
+        case "M":
 
-    } else if (deM) {
+        case "Dm":
 
-    } else if (deDM) {
+        case "Cm":
 
-    } else if (deCM) {
-
-    } else if (deMM) {
+        case "Mm":
 
     }
 }
 
 function km(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    } else if (paraHM) {
-        resultado.innerHTML = (num / 10 + "Hm.");
-    } else if (paraDaM) {
-
-    } else if (paraM) {
-
-    } else if (paraDM) {
-
-    } else if (paraCM) {
-
-    } else if (paraMM) {
-
-    }
-}
-
-function hm(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    }
-    if (paraHM) {
-
-    }
-    if (paraDaM) {
-
-    }
-    if (paraM) {
-
-    }
-    if (paraDM) {
-
-    }
-    if (paraCM) {
-
-    }
-    if (paraMM) {
-
-    }
-}
-
-function dam(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    }
-    if (paraHM) {
-
-    }
-    if (paraDaM) {
-
-    }
-    if (paraM) {
-
-    }
-    if (paraDM) {
-
-    }
-    if (paraCM) {
-
-    }
-    if (paraMM) {
-
-    }
-}
-
-function m(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    }
-    if (paraHM) {
-
-    }
-    if (paraDaM) {
-
-    }
-    if (paraM) {
-
-    }
-    if (paraDM) {
-
-    }
-    if (paraCM) {
-
-    }
-    if (paraMM) {
-
-    }
-}
-
-function dm(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    }
-    if (paraHM) {
-
-    }
-    if (paraDaM) {
-
-    }
-    if (paraM) {
-
-    }
-    if (paraDM) {
-
-    }
-    if (paraCM) {
-
-    }
-    if (paraMM) {
-
-    }
-}
-
-function cm(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    }
-    if (paraHM) {
-
-    }
-    if (paraDaM) {
-
-    }
-    if (paraM) {
-
-    }
-    if (paraDM) {
-
-    }
-    if (paraCM) {
-
-    }
-    if (paraMM) {
-
-    }
-}
-
-function mm(num) {
-    if (paraKM) {
-        resultado.innerHTML = (num + "Km.");
-    }
-    if (paraHM) {
-
-    }
-    if (paraDaM) {
-
-    }
-    if (paraM) {
-
-    }
-    if (paraDM) {
-
-    }
-    if (paraCM) {
-
-    }
-    if (paraMM) {
-
+    switch (destiny) {
+        case "Km":
+            resultado.innerHTML = (num + " Km é igual a " + num + "Km.");
+            break;
+        case "Hm":
+            resultado.innerHTML = (num + " Km é igual a " + num / 10 + "Hm.");
+            break;
+        case "Dam":
+            resultado.innerHTML = (num + " Km é igual a " + num / 100 + "Dam.");
+            break;
+        case "M":
+            resultado.innerHTML = (num + " Km é igual a " + num / 1000 + "M.");
+            break;
+        case "Dm":
+            resultado.innerHTML = (num + " Km é igual a " + num / 10000 + "Dm.");
+            break;
+        case "Cm":
+            resultado.innerHTML = (num + " Km é igual a " + num / 100000 + "Cm.");
+            break;
+        case "Mm":
+            resultado.innerHTML = (num + " Km é igual a " + num / 1000000 + "Mm.");
     }
 }

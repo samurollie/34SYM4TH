@@ -5,45 +5,45 @@ function converter() {
     // alert ("origin = " + origin);
     var num = parseFloat(document.forms[0].valor.value);
     switch (origin) {
-        case "Km":
+        case 'Km':
             km(num);
             break;
-        case "Hm":
+        case 'Hm':
 
-        case "Dam":
+        case 'Dam':
 
-        case "M":
+        case 'M':
 
-        case "Dm":
+        case 'Dm':
 
-        case "Cm":
+        case 'Cm':
 
-        case "Mm":
+        case 'Mm':
 
     }
 }
 
 function km(num) {
     switch (destiny) {
-        case "Km":
+        case 'Km':
             resultado.innerHTML = (num + " Km é igual a " + num + "Km.");
             break;
-        case "Hm":
+        case 'Hm':
             resultado.innerHTML = (num + " Km é igual a " + num / 10 + "Hm.");
             break;
-        case "Dam":
+        case 'Dam':
             resultado.innerHTML = (num + " Km é igual a " + num / 100 + "Dam.");
             break;
-        case "M":
+        case 'M':
             resultado.innerHTML = (num + " Km é igual a " + num / 1000 + "M.");
             break;
-        case "Dm":
+        case 'Dm':
             resultado.innerHTML = (num + " Km é igual a " + num / 10000 + "Dm.");
             break;
-        case "Cm":
+        case 'Cm':
             resultado.innerHTML = (num + " Km é igual a " + num / 100000 + "Cm.");
             break;
-        case "Mm":
+        case 'Mm':
             resultado.innerHTML = (num + " Km é igual a " + num / 1000000 + "Mm.");
     }
 }

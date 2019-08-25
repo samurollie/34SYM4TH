@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Conversão de Bases Numéricas - Temperatura</title>
-    <script src="nomedoarquivo.js"></script> <!-- Insira aqui o JavaScript -->
+    <title>Conversão de Unidades - Temperatura</title>
+    <script src="temperatura.js"></script> <!-- Insira aqui o JavaScript -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--NÃO REMOVA! ISSO AQUI É PARA INCLUIR O CSS-->
 </head>
@@ -27,85 +27,38 @@
         <a href="#">Sobre nós</a> |
         <a href="#">Contato</a> |
     </nav>
-    <h2>Aqui vai o titulo da pagina</h2>
+    <h2>Conversão de Unidades - Temperatura</h2>
     <hr />
     <form>
-            <table>
-                <tr>
-                    <td>
-                        <p>Km</p>
-                    </td>
-                    <td>
-                        <p>Hm</p>
-                    </td>
-                    <td>
-                        <p>Dam</p>
-                    </td>
-                    <td>
-                        <p>M</p>
-                    </td>
-                    <td>
-                        <p>Cm</p>
-                    </td>
-                    <td>
-                        <p>Dm</p>
-                    </td>
-                    <td>
-                        <p>Mm</p>
-                    </td>
-                    <td>
-                        <p>Valor:</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="KmPara" /></td>
-                    <td><input type="radio" name="HmPara" /></td>
-                    <td><input type="radio" name="DamPara" /></td>
-                    <td><input type="radio" name="MPara" /></td>
-                    <td><input type="radio" name="DmPara" /></td>
-                    <td><input type="radio" name="CmPara" /></td>
-                    <td><input type="radio" name="MmPara" /></td>
-                    <td><input type="text" name="valor" placeholder="Valor" required /></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Km</p>
-                    </td>
-                    <td>
-                        <p>Hm</p>
-                    </td>
-                    <td>
-                        <p>Dam</p>
-                    </td>
-                    <td>
-                        <p>M</p>
-                    </td>
-                    <td>
-                        <p>Cm</p>
-                    </td>
-                    <td>
-                        <p>Dm</p>
-                    </td>
-                    <td>
-                        <p>Mm</p>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="Km" /></td>
-                    <td><input type="radio" name="Hm" /></td>
-                    <td><input type="radio" name="Dam" /></td>
-                    <td><input type="radio" name="Metros" /></td>
-                    <td><input type="radio" name="Cm" /></td>
-                    <td><input type="radio" name="Dm" /></td>
-                    <td><input type="radio" name="Mm" /></td>
-                    <td><input type="button" value="Clique aqui para converter" onclick="converter(valor)" /></td>
-                </tr>
-            </table>
-        </form>
-        <hr />
-        <p id="resultado"></p>
+        <table>
+            <tr>
+                <td>Célsius</td>
+                <td>Farenheit</td>
+                <td>Kelvin</td>
+                <td>Valor:</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="origin" value="C" /></td>
+                <td><input type="radio" name="origin" value="F" /></td>
+                <td><input type="radio" name="origin" value="K" /></td>
+                <td><input type="text" name="valor" placeholder="Digite aqui o seu valor" required /></td>
+            </tr>
+            <tr>
+                <td>Célsius</td>
+                <td>Farenheit</td>
+                <td>Kelvin</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="destiny" value="Celsius" /></td>
+                <td><input type="radio" name="destiny" value="Farenheit" /></td>
+                <td><input type="radio" name="destiny" value="Kelvin" /></td>
+                <td><input type="button" value="Clique aqui" onclick="converter(valor)" /></td>
+            </tr>
+        </table>
+    </form>
+    <hr />
+    <p id="resultado"></p>
     <hr />
     <footer>
         Copyright &copy; 2019. All rights reserved.

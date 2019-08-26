@@ -3,10 +3,10 @@ function checagem(a, b, c) {
         alert('Esta equação não é de segundo grau. Por favor digite outra.');
     } else {
         document.getElementById("coeficientes").innerHTML = ("Coeficientes:</br>a = " + a + "</br>b = " + b + "</br>c = " + c + "<hr/>"); // Mostra o coeficientes.
-
-        if (a > 0) {
+// Descrições da equação.
+        if (a > 0) { // descrições da equação do tipo se a > 0.
             document.getElementById("coeficientes").innerHTML = ("<br>Como na equação acima o <b>a</b> é positivo, seu gráfico será uma parábola com concavidade para <b>cima</b>.");
-        } else {
+        } else { // descrições da equação do tipo se a < 0.
             document.getElementById("coeficientes").innerHTML = ("<br>Como na equação acima o <b>a</b> é negativo, seu gráfico será uma parábola com concavidade para <b>baixo</b>.");
         }
         d(a, b, c);
@@ -20,17 +20,17 @@ function casa(num, cont) {
 }
 
 function digitos(n, digitado) { // contar a quantidade de digitos do a, b e c.
-    var conta = -1,
-        contb = -1,
-        contc = -1; // cont conta os digitos de a, b e c.
-    flag = 0;
+    var conta = -1, // conta digitos de a.
+        contb = -1, // conta digitos de b.
+        contc = -1; // conta digitos de c.
+    flag = 0; // nesta função a flag servirá para sinalizar qual digito 
 
-    for (i = 0; i < n; i++) { // Busca a localização de x(ela pode variar dependendo da quantia de casas que o 'a' e o 'b' tiverem).
+    for (i = 0; i < n; i++) { // Busca a localização de x (ela pode variar dependendo da quantia de casas que o 'a' e o 'b' tiverem).
         if (digitado[i] == '-' || digitado[i] == '+') {
             i++;
         }
         if (digitado[i] != 'x') {
-            if (flag == 0) {
+            if (flag == 0) { // se flag = 0, 
                 conta = conta + 1; // conta quantos digitos terá a.
             } else if (flag == 1) {
                 contb = contb + 1;
@@ -120,22 +120,22 @@ function gerar(conta, contb, contc, digitado, n, flag) { // gerar os termos(a, b
     checagem(a, b, c);
 }
 
-function calculo() {
-    var digitado = document.forms[0].equacao.value;
-    var i;
+function calculo() { // Irá pegar os valores dos coeficientes na expressão em formato texto.
+    var digitado = document.forms[0].equacao.value; // salva num array a expressão que representa a equação de segundo grau.
+    var i; // contador.
     var flag = 0;
-    var n = digitado.length;
+    var n = digitado.length; // pega o tamanho da expressão.
 
     for (i = 0; i < n; i++) { // Procura pelo ² para checar se a equação é quadrática.
         if (digitado[i] == '²') {
-            flag = 1;
+            flag = 1; // se flag = 1, a funço é quadrática.
             break;
         }
     }
-    if (flag == 0) {
+    if (flag == 0) { // Se flag = 0, a equação não é quadrática.
         alert("Não é uma equação do segundo grau.\nPor favor direcione-se à página de equações de primeiro grau.");
     } else {
-        digitos(n, digitado, flag);
+        digitos(n, digitado, flag); // esta função pega o tamanho (quantidade de digitos) do a, do b e do c.
     }
 }
 

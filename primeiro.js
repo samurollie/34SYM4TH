@@ -56,7 +56,8 @@ function raiz(a, b) {
        Logo, tudo que vier antes do elemento "x", fará parte do "a";
        Da mesma maneira que tudo que vier após o "x", especificamente após o sinal que vem após o "x" (+ ou -), fará parte do "b";
        pegar o "a":
-       fazemos um loop que busca elementos != de x, e de - ou +, e armazenamos
+       fazemos um loop que busca elementos != de x, e de - ou +, e armazenamos estes numeros (que sero inteiros) no a.
         pegar o "b":
+        fazemos um loop que busca elementos até o fim do array, logo após de um - ou +, e armazenamos estes numeros (que serão inteiros) no b.
     /* 
 }

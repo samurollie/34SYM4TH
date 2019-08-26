@@ -2,9 +2,10 @@ function calculo() {
     var expre = document.forms[0].equacao.value;
     var i, flag = 0; // flag varia em 0 (sinaliza a) e 1 (sinaliza b).
     var n = expre.length;
-    var a = 1, b = 1;
+    var a = 1,
+        b = 1;
     var num; // servirá de auxiliar.
-    
+
     for (i = 0; i < n; i++) {
         if (expre[i] == '-') {
             if (flag == 0) {

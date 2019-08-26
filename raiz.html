@@ -2,50 +2,52 @@
 
 <html>
 
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Contas Básicas</title>
-        <script>
-          function radiciando ()
-          {
-            var a1 = parseFloat(document.forms[0].a.value);
+<head>
+  <meta charset="UTF-8" />
+  <title>Contas Básicas</title>
+  <script>
+    function radiciando() {
+      var a1 = parseFloat(document.forms[0].a.value);
 
-            var result = Math.sqrt(a1);
+      var result = Math.sqrt(a1);
 
-            document.getElementById("radic").innerHTML = ("A raiz quadrada de " + a1 + " é: " + result);
-          }
-        </script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+      document.getElementById("radic").innerHTML = ("A raiz quadrada de " + a1 + " é: " + result);
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-    <body>
-        <header>
-            <h1>34SYM4TH</h1>
-        </header>
-        <nav>
-            | <a href="index.html">Página Inicial</a> |
-          <a href="geometriaPlana.html">Geometria Plana</a> |
-          <a href="contasbasicas.html">Contas Básicas</a> |
-          <a href="conversaoBases.html">Conversões Numéricas</a> |
-          <a href="conversaoUnidades.html">Conversão de unidades</a> |
-          <a href="equacoes.html">Equações</a> |
-          <a href="sobre_nos.html">Sobre nós</a> |
-          <a href="contato.html">Contato</a> |
-        </nav>
-        <h2>Contas básicas - Radiciação</h2>
-        <hr>
-        <form>
-          <p><li><strong>Explicação: </strong>  Será calculado, um número positivo,
-            que quando multiplicado por ele mesmo, se iguala ao x. </p>
-          <p>Digite o valor de x:</p>
-            <input type="text" name="a" /> </br></br>
+<body>
+  <header>
+    <h1>34SYM4TH</h1>
+  </header>
+  <nav>
+    | <a href="index.html">Página Inicial</a> |
+    <a href="geometriaPlana.html">Geometria Plana</a> |
+    <a href="contasbasicas.html">Contas Básicas</a> |
+    <a href="conversaoBases.html">Conversões Numéricas</a> |
+    <a href="conversaoUnidades.html">Conversão de unidades</a> |
+    <a href="equacoes.html">Equações</a> |
+    <a href="sobre_nos.html">Sobre nós</a> |
+    <a href="contato.html">Contato</a> |
+  </nav>
+  <h2>Contas básicas - Radiciação</h2>
+  <hr>
+  <form>
+    <p>
+      <li><strong>Explicação: </strong> Será calculado, um número positivo,
+        que quando multiplicado por ele mesmo, se iguala ao x.
+    </p>
+    <p>Digite o valor de x:</p>
+    <input type="text" name="a" /> </br></br>
 
-            <input type="button" value="Encontrar raiz" onclick="radiciando(a)" />
-          <p id = "radic" ></p>
-        </form>
-        <hr>
-        <footer>
-            Copyright &copy; 2019. All rights reserved.
-        </footer>
-    </body>
+    <input type="button" value="Encontrar raiz" onclick="radiciando(a)" />
+    <p id="radic"></p>
+  </form>
+  <hr>
+  <footer>
+    Copyright &copy; 2019. All rights reserved.
+  </footer>
+</body>
+
 </html>

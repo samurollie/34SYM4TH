@@ -2,52 +2,57 @@
 
 <html>
 
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Contas Básicas</title>
-        <script>
-          function somando ()
-          {
-            var a1 = parseFloat(document.forms[0].a.value);
-            var b1 = parseFloat(document.forms[0].b.value);
+<head>
+  <meta charset="UTF-8" />
+  <title>Contas Básicas</title>
+  <script>
+    function somando() {
+      var a1 = parseFloat(document.forms[0].a.value);
+      var b1 = parseFloat(document.forms[0].b.value);
 
-            var result = a1 + b1;
+      var result = a1 + b1;
 
-            document.getElementById("soma").innerHTML = (a1 + " somado com " + b1 + " resulta: " + result);
-          }
-        </script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+      document.getElementById("soma").innerHTML = (a1 + " somado com " + b1 + " resulta: " + result);
+    }
+  </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-    <body>
-        <header>
-            <h1>34SYM4TH</h1>
-        </header>
-        <nav>
-            | <a href="index.html">Página Inicial</a> |
-          <a href="geometriaPlana.html">Geometria Plana</a> |
-          <a href="contasbasicas.html">Contas Básicas</a> |
-          <a href="conversaoBases.html">Conversões Numéricas</a> |
-          <a href="conversaoUnidades.html">Conversão de unidades</a> |
-          <a href="equacoes.html">Equações</a> |
-          <a href="sobre_nos.html">Sobre nós</a> |
-          <a href="contato.html">Contato</a> |
-        </nav>
-        <h2>Contas básicas - Adição</h2>
-        <hr>
-        <form>
-          <p><li><strong>Explicação: </strong>  É a combinação de números em um só.</p>
-          <p><li> <strong>Execução:</strong> As unidades serão somadas entre si, assim como as dezenas, as centenas e as outras partes dos algarismos.</p>
-          <p>Digite duas entradas:</p>
-            <input type="text" name="a" /> </br></br>
-            <input type="text" name="b" /> </br></br>
+<body>
+  <header>
+    <h1>34SYM4TH</h1>
+  </header>
+  <nav>
+    | <a href="index.html">Página Inicial</a> |
+    <a href="geometriaPlana.html">Geometria Plana</a> |
+    <a href="contasbasicas.html">Contas Básicas</a> |
+    <a href="conversaoBases.html">Conversões Numéricas</a> |
+    <a href="conversaoUnidades.html">Conversão de unidades</a> |
+    <a href="equacoes.html">Equações</a> |
+    <a href="sobre_nos.html">Sobre nós</a> |
+    <a href="contato.html">Contato</a> |
+  </nav>
+  <h2>Contas básicas - Adição</h2>
+  <hr>
+  <form>
+    <p>
+      <li><strong>Explicação: </strong> É a combinação de números em um só.
+    </p>
+    <p>
+      <li> <strong>Execução:</strong> As unidades serão somadas entre si, assim como as dezenas, as centenas e as outras
+        partes dos algarismos.
+    </p>
+    <p>Digite duas entradas:</p>
+    <input type="text" name="a" /> </br></br>
+    <input type="text" name="b" /> </br></br>
 
-            <input type="button" value="Somar" onclick="somando(a, b)" />
-          <p id = "soma" ></p>
-        </form>
-        <hr>
-        <footer>
-            Copyright &copy; 2019. All rights reserved.
-        </footer>
-    </body>
+    <input type="button" value="Somar" onclick="somando(a, b)" />
+    <p id="soma"></p>
+  </form>
+  <hr>
+  <footer>
+    Copyright &copy; 2019. All rights reserved.
+  </footer>
+</body>
+
 </html>

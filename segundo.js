@@ -1,9 +1,9 @@
-function checagem (a, b, c) {
+function checagem(a, b, c) {
     if (a == 0) {
         alert('Esta equação não é de segundo grau. Por favor digite outra.');
     } else {
         document.getElementById("coeficientes").innerHTML = ("Coeficientes:</br>a = " + a + "</br>b = " + b + "</br>c = " + c + "<hr/>");
-        
+
         if (a > 0) {
             document.getElementById("coeficientes").innerHTML = ("<br>Como na equação acima o <b>a</b> é positivo, seu gráfico será uma parábola com concavidade para <b>cima</b>.");
         } else {
@@ -13,16 +13,18 @@ function checagem (a, b, c) {
     }
 }
 
-function casa (num, cont) {
+function casa(num, cont) {
     cont = Math.pow(10, cont);
-    
+
     return num * cont;
 }
 
 function digitos(n, digitado) { // contar a quantidade de digitos do a, b e c.
-    var conta = -1, contb = -1, contc = -1; // cont conta os digitos de a, b e c.
+    var conta = -1,
+        contb = -1,
+        contc = -1; // cont conta os digitos de a, b e c.
     flag = 0;
-    
+
     for (i = 0; i < n; i++) { // Busca a localização de x(ela pode variar dependendo da quantia de casas que o 'a' e o 'b' tiverem).
         if (digitado[i] == '-' || digitado[i] == '+') {
             i++;
@@ -41,7 +43,7 @@ function digitos(n, digitado) { // contar a quantidade de digitos do a, b e c.
                 flag = 1; // sinaliza os digitos de b.
             } else {
                 flag = 2; // sinaliza os digitos de c.
-            } 
+            }
         }
     }
     gerar(conta, contb, contc, digitado, n, flag);
@@ -56,7 +58,10 @@ function converter(numero) {
 }
 
 function gerar(conta, contb, contc, digitado, n, flag) { // gerar os termos(a, b e c).
-    var a = 1, b = 1, c = 1, num;
+    var a = 1,
+        b = 1,
+        c = 1,
+        num;
     flag = 0;
 
     for (i = 0; i < n; i++) {
@@ -68,7 +73,7 @@ function gerar(conta, contb, contc, digitado, n, flag) { // gerar os termos(a, b
                     b = -1;
                 } else {
                     c = -1;
-                }    
+                }
             }
             i++;
         }
@@ -108,7 +113,7 @@ function gerar(conta, contb, contc, digitado, n, flag) { // gerar os termos(a, b
                 flag = 1; // sinaliza os digitos de b.
             } else {
                 flag = 2; // sinaliza os digitos de c.
-            } 
+            }
         }
     }
     console.log(a, b, c);
@@ -127,28 +132,28 @@ function calculo() {
             break;
         }
     }
-    if (flag == 0) { 
+    if (flag == 0) {
         alert("Não é uma equação do segundo grau.\nPor favor direcione-se à página de equações de primeiro grau.");
     } else {
         digitos(n, digitado, flag);
     }
 }
 
-function d (a, b, c) {
+function d(a, b, c) {
     var delta = (b * b) - (4 * a * c);
 
     if (delta > 0) {
         document.getElementById("delta").innerHTML = ("&Delta; = " + delta + ", logo, a equação possui duas raízes reais:");
         raiz(a, b, delta);
-    
+
     } else if (delta == 0) {
         document.getElementById("delta").innerHTML = ("&Delta; = " + delta + ", logo, a equação possui uma única raiz real:");
         raiz(a, b, delta);
-        
+
     } else { // delta menor que zero.
         document.getElementById("delta").innerHTML = ("&Delta; = " + delta + ", logo, a equação não possui raízes reais." + "Para <b>delta < 0</b>, a parábola não irá cortar o eixo x em nenhum ponto.");
         document.getElementById("raizes").innerHTML = ("(<i>x</i> &#8713; R)");
-       
+
     }
 }
 
@@ -162,6 +167,6 @@ function raiz(a, b, delta) { // Calcula a(s) raiz/ raizes da equacao, de acordo 
     x1 = x1.toFixed(4);
     x2 = x2.toFixed(4);
 
-    document.getElementById("descricao1").innerHTML = (delta == 0) ? ("<i>x</i> = " + x1 + "Para <b>delta = 0</b>, a parábola irá cortar o <b>eixo x</b> no ponto " + x1 + ".") : 
-    ("<i>x'</i> = " + x1 + "</br><i>x''</i> = " + x2 + "<br><br>Para <b>delta > 0</b>, a parábola irá cortar o <b>eixo x</b> nos pontos " + x1 + " e " + x2 + ".");
+    document.getElementById("descricao1").innerHTML = (delta == 0) ? ("<i>x</i> = " + x1 + "Para <b>delta = 0</b>, a parábola irá cortar o <b>eixo x</b> no ponto " + x1 + ".") :
+        ("<i>x'</i> = " + x1 + "</br><i>x''</i> = " + x2 + "<br><br>Para <b>delta > 0</b>, a parábola irá cortar o <b>eixo x</b> nos pontos " + x1 + " e " + x2 + ".");
 }

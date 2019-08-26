@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Conversão de Bases Numéricas</title>
+    <script src="conversaoBases.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>34SYM4TH</h1>
+    </header>
+    <nav>
+        | <a href="index.html">Página Inicial</a> |
+        <a href="geometriaPlana.html">Geometria Plana</a> |
+        <a href="contasbasicas.html">Contas Básicas</a> |
+        <a href="conversaoBases.html">Conversões Numéricas</a> |
+        <a href="conversaoUnidades.html">Conversão de unidades</a> |
+        <a href="equacoes.html">Equações</a> |
+        <a href="sobre_nos.html">Sobre nós</a> |
+        <a href="contato.html">Contato</a> |
+    </nav>
+    <h2>Conversão de Bases Numéricas</h2>
+    <hr />
+    <form>
+        <table>
+            <tr>
+                <td colspan="5" style="text-align: left">
+                    <ul>
+                        <li>Selecione a base de origem:</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Decimal</td>
+                <td>Binária</td>
+                <td>Valor:</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="origin" value="Decimal" /></td>
+                <td><input type="radio" name="origin" value="Binária" /></td>
+                <td><input type="text" placeholder="Valor" name="valor" required /></td>
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: left">
+                    <ul>
+                        <li>Selecione a base de destino:</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Decimal</td>
+                <td>Binária</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="destiny" value="d" /></td>
+                <td><input type="radio" name="destiny" value="b" /></td>
+                <td><input type="button" value="Calcular!" onclick="converter(valor)" /></td>
+            </tr>
+        </table>
+    </form>
+    <h3>Resultado: </h3>
+    <p id="resultado"></p>
+    <p id="explicacao"></p>
+    <hr />
+    <footer>
+        Copyright &copy; 2019. All rights reserved.
+    </footer>
+</body>
+
+</html>

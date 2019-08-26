@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Contas Básicas</title>
+        <script>
+          function dividindo ()
+          {
+            var a1 = parseFloat(document.forms[0].a.value);
+            var b1 = parseFloat(document.forms[0].b.value);
+
+            var result = a1 / b1;
+
+            document.getElementById("divis").innerHTML = (a1 + " dividido por " + b1 + " resulta: " + result);
+          }
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>34SYM4TH</h1>
+        </header>
+        <nav>
+            | <a href="index.html">Página Inicial</a> |
+          <a href="geometriaPlana.html">Geometria Plana</a> |
+          <a href="contasbasicas.html">Contas Básicas</a> |
+          <a href="conversaoBases.html">Conversões Numéricas</a> |
+          <a href="conversaoUnidades.html">Conversão de unidades</a> |
+          <a href="equacoes.html">Equações</a> |
+          <a href="sobre_nos.html">Sobre nós</a> |
+          <a href="contato.html">Contato</a> |
+        </nav>
+        <h2>Contas básicas - Divisão</h2>
+        <hr>
+        <form>
+          <p><li><strong>Explicação: </strong>  Dividendo é o número
+            que vai ser dividido em "n" partes iguais.
+            O divisor é o número "n" que indica quantas vezes o dividendo será dividido.
+            O resultado é chamado de Quociente. </p>
+          <p>Digite o valor do dividendo:</p>
+            <input type="text" name="a" /> </br>
+          <p>Digite o valor do dividor:</p>
+            <input type="text" name="b" /> </br></br>
+
+            <input type="button" value="Dividir" onclick="dividindo(a, b)" />
+          <p id = "divis" ></p>
+        </form>
+        <hr>
+        <footer>
+            Copyright &copy; 2019. All rights reserved.
+        </footer>
+    </body>
+</html>

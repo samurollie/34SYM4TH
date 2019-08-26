@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Contas Básicas</title>
+        <script>
+          function subtraindo ()
+          {
+            var a1 = parseFloat(document.forms[0].a.value);
+            var b1 = parseFloat(document.forms[0].b.value);
+
+            var result = a1 - b1;
+
+            document.getElementById("menos").innerHTML = ("Resultado: " + result);
+          }
+        </script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>34SYM4TH</h1>
+        </header>
+        <nav>
+            | <a href="index.html">Página Inicial</a> |
+          <a href="geometriaPlana.html">Geometria Plana</a> |
+          <a href="contasbasicas.html">Contas Básicas</a> |
+          <a href="conversaoBases.html">Conversões Numéricas</a> |
+          <a href="conversaoUnidades.html">Conversão de unidades</a> |
+          <a href="equacoes.html">Equações</a> |
+          <a href="sobre_nos.html">Sobre nós</a> |
+          <a href="contato.html">Contato</a> |
+        </nav>
+        <h2>Contas básicas - Subtração</h2>
+        <hr>
+        <p><li><strong>Explicação: </strong>O minuendo é o número do qual será
+          retirado um valor. O subtraendo é o valor que será retirado do
+          minuendo. O resultado é chamado de resto ou diferença.</p>
+        <p><li> <strong>Execução: </strong>A unidade do minuendo será subtraida
+          pela unidade do subtraendo. O mesmo vai acontecer com as outras partes
+          dos algarismos. Quando subtraímos valores de dois ou mais dígitos
+          manualmente , o valor de um dos dígitos do minuendo pode ser
+          menor que o dígito do subtraendo. Dessa forma, deve-se pegar
+          "emprestado" do número vizinho. Por exemplo, 353 - 255. Analisando as unidades,
+          percebemos que não é possivel tirar cinco(5) de três(3). Dessa forma,
+          o vizinho de três(3), que é cinco(5),  perde um(1) e passa a valer
+          quatro(4). Já o três(3) que pegou "emprestado" passa a valer treze(13).<br>
+          Caso o vizinho de três(3) fosse zero(0), o zero passaria a valer nove(9) e o três(3) passaria
+          a valer treze(13) do mesmo jeito.</p>
+        <form>
+          <p>Digite o minuendo:</p>
+            <input type="text" name="a" /> </br>
+          <p>Digite o subtraendo:</p>
+            <input type="text" name="b" /> </br></br>
+
+            <input type="button" value="Subtrair" onclick="subtraindo(a, b)" />
+          <p id = "menos" ></p>
+        </form>
+        <hr>
+        <footer>
+            Copyright &copy; 2019. All rights reserved.
+        </footer>
+    </body>
+</html>

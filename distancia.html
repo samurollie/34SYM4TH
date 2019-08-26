@@ -5,124 +5,82 @@
 <head>
     <meta charset="UTF-8" />
     <title>Conversão de Bases Numéricas - Distâncias</title>
-    <script src="distancia.js"></script> <!-- Insira aqui o JavaScript -->
+    <script src="distancia.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--NÃO REMOVA! ISSO AQUI É PARA INCLUIR O CSS-->
 </head>
 
 <body>
     <header>
-        <!-- O cabeçalho da pagina -->
         <h1>34SYM4TH</h1>
     </header>
     <nav>
-        | <a href="index.html">Página Inicial</a> |
+        | <a href="home_page.html">Página Inicial</a> |
         <a href="geometriaPlana.html">Geometria Plana</a> |
+        <a href="#">Geometria Espacial</a> |
         <a href="contasbasicas.html">Contas Básicas</a> |
         <a href="conversaoBases.html">Conversões Numéricas</a> |
         <a href="conversaoUnidades.html">Conversão de unidades</a> |
-        <a href="equacoes.html">Equações</a> |
-        <a href="sobre_nos.html">Sobre nós</a> |
-        <a href="contato.html">Contato</a> |
+        <a href="#">Equações</a> |
+        <a href="#">Sobre nós</a> |
+        <a href="#">Contato</a> |
     </nav>
 
     <h2>Conversão de unidades - Distâncias</h2>
     <hr />
-
-    <form>
-        <table>
-            <tr>
-                <td>
-                    <p>Km</p>
-                </td>
-                <td>
-                    <p>Hm</p>
-                </td>
-                <td>
-                    <p>Dam</p>
-                </td>
-                <td>
-                    <p>M</p>
-                </td>
-                <td>
-                    <p>Dm</p>
-                </td>
-                <td>
-                    <p>Cm</p>
-                </td>
-                <td>
-                    <p>Mm</p>
-                </td>
-                <td>
-                    <p>Valor:</p>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="origin" value="Km" /></td>
-                <td><input type="radio" name="origin" value="Hm" /></td>
-                <td><input type="radio" name="origin" value="Dam" /></td>
-                <td><input type="radio" name="origin" value="M" /></td>
-                <td><input type="radio" name="origin" value="Dm" /></td>
-                <td><input type="radio" name="origin" value="Cm" /></td>
-                <td><input type="radio" name="origin" value="Mm" /></td>
-                <td><input type="text" name="valor" placeholder="Valor" required /></td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Km</p>
-                </td>
-                <td>
-                    <p>Hm</p>
-                </td>
-                <td>
-                    <p>Dam</p>
-                </td>
-                <td>
-                    <p>M</p>
-                </td>
-                <td>
-                    <p>Dm</p>
-                </td>
-                <td>
-                    <p>Cm</p>
-                </td>
-                <td>
-                    <p>Mm</p>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="radio" name="destiny" value="Km" /></td>
-                <td><input type="radio" name="destiny" value="Hm" /></td>
-                <td><input type="radio" name="destiny" value="Dam" /></td>
-                <td><input type="radio" name="destiny" value="M" /></td>
-                <td><input type="radio" name="destiny" value="Dm" /></td>
-                <td><input type="radio" name="destiny" value="Cm" /></td>
-                <td><input type="radio" name="destiny" value="Mm" /></td>
-                <td><input type="button" value="Clique aqui para converter" onclick="converter(valor)" /></td>
-            </tr>
-        </table>
+    <tr>
+        <p>Escolha a base de origem:</p>
+        <td><input type="radio" name="origin" value="Km" />km</td>
+        <td><input type="radio" name="origin" value="Hm" />hm</td>
+        <td><input type="radio" name="origin" value="Dam" />dam</td>
+        <td><input type="radio" name="origin" value="M" />m</td>
+        <td><input type="radio" name="origin" value="Dm" />dm</td>
+        <td><input type="radio" name="origin" value="Cm" />cm</td>
+        <td><input type="radio" name="origin" value="Mm" />mm</td>
+        <p>Digite o valor a ser transformado: <input type="text" name="valor" placeholder="Digite um valor.."
+                required /></p>
+    </tr>
+    <tr>
+        <p>Escolha a base a que se queira transformar:</p>
+        <td><input type="radio" name="destiny" value="Km" />km</td>
+        <td><input type="radio" name="destiny" value="Km" />hm</td>
+        <td><input type="radio" name="destiny" value="Dam" />dam</td>
+        <td><input type="radio" name="destiny" value="M" />m</td>
+        <td><input type="radio" name="destiny" value="Dm" />dm</td>
+        <td><input type="radio" name="destiny" value="Cm" />cm</td>
+        <td><input type="radio" name="destiny" value="Mm" />mm</td>
+        <p><input type="button" value="Converter" onclick="converter(valor)" /></p>
+    </tr>
     </form>
     <hr />
+    <p><b>Resultado:</b></p>
     <p id="resultado"></p>
     <p>A transformação de unidades de medida de comprimento é baseada na seguinte imagem:</p>
-    <img src="comprimento.jpg" />
-    <p>Onde, de acordo com a unidade de origem, deve-se "mover a vírgula" da esquerda para a direita.</p>
+
+    <img
+        src="https://raw.githubusercontent.com/samurollie/34SYM4TH/samuel/comprimento.jpg?token=ALPPYHZQU76ERXE6PIGDRFK5NRZEE" />
+
+    <h6><a href="https://mundoeducacao.bol.uol.com.br/matematica/unidades-medida-comprimento.htm">imagem linkada deste
+            site</a></h6>
+
+    <p>Onde, de acordo com a <b>unidade de origem</b>, deve-se "<i>mover a vírgula</i>" da <b>esquerda</b> para a
+        <b>direita</b> e virce-versa, dependendo do lado da tabela para onde se quer ir.</p>
     <p>Por exemplo, para converter 1,9872 metros em centímetros, a vírgula deve ser "deslocada" 2 casas para a direita,
         ou seja, multiplicar o número original por 100.
     </p>
-    <p><i>Exemplos:</i></p>
-    1,9872 m = 198,72 cm.</br>
-    5,8 cm = 58 mm. </br>
-    1 Km = 1000 m. </br>
+    <p><i>Exemplos (deslocando para a <b>direita</b>):</i></p>
+    1,9872 m = 198,72 cm.
     </br>
-    <p>Para realisar o contrário, a vírgula deve ser deslocada para a esquerda, ou seja, deve ser realizada uma divisão.
-    </p>
-    <p><i>Exemplos:</i></p>
-    198,72 cm = 1,9872 m.</br>
-    58 mm = 5,8 cm.</br>
-    1000 mm = 1 m.</br>
+    5,8 cm = 58 mm.
+    </br>
+    1 km = 1000 m. </br>
+    </br>
+    <p><i>Exemplos (deslocando para a <b>esquerda</b>):</i></p>
+    198,72 cm = 1,9872 m.
+    </br>
+    58 mm = 5,8 cm.
+    </br>
+    1000 mm = 1 m.
+    </br>
     </br>
     <footer>
         Copyright &copy; 2019. All rights reserved.

@@ -4,56 +4,69 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Conversão de Bases Numéricas - Distâncias</title>
-    <script src="distancia.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Conversão de Unidades - Distâncias</title>
+    <script src="distancia.js"></script> <!-- Insere o Javascript -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Insere o CSS -->
 </head>
 
 <body>
     <header>
+        <!-- Cabeçalho da página -->
         <h1>34SYM4TH</h1>
     </header>
     <nav>
-        | <a href="home_page.html">Página Inicial</a> |
+        <!-- área de navegação -->
+        <!-- abaixo tem-se as linkagens que levam a outras páginas -->
+        | <a href="index.html">Página Inicial</a> |
         <a href="geometriaPlana.html">Geometria Plana</a> |
-        <a href="#">Geometria Espacial</a> |
         <a href="contasbasicas.html">Contas Básicas</a> |
         <a href="conversaoBases.html">Conversões Numéricas</a> |
         <a href="conversaoUnidades.html">Conversão de unidades</a> |
-        <a href="#">Equações</a> |
-        <a href="#">Sobre nós</a> |
-        <a href="#">Contato</a> |
+        <a href="equacoes.html">Equações</a> |
+        <a href="sobre_nos.html">Sobre nós</a> |
+        <a href="contato.html">Contato</a> |
     </nav>
 
     <h2>Conversão de unidades - Distâncias</h2>
     <hr />
-    <tr>
-        <p>Escolha a base de origem:</p>
-        <td><input type="radio" name="origin" value="Km" />km</td>
-        <td><input type="radio" name="origin" value="Hm" />hm</td>
-        <td><input type="radio" name="origin" value="Dam" />dam</td>
-        <td><input type="radio" name="origin" value="M" />m</td>
-        <td><input type="radio" name="origin" value="Dm" />dm</td>
-        <td><input type="radio" name="origin" value="Cm" />cm</td>
-        <td><input type="radio" name="origin" value="Mm" />mm</td>
-        <p>Digite o valor a ser transformado: <input type="text" name="valor" placeholder="Digite um valor.."
-                required /></p>
-    </tr>
-    <tr>
-        <p>Escolha a base a que se queira transformar:</p>
-        <td><input type="radio" name="destiny" value="Km" />km</td>
-        <td><input type="radio" name="destiny" value="Km" />hm</td>
-        <td><input type="radio" name="destiny" value="Dam" />dam</td>
-        <td><input type="radio" name="destiny" value="M" />m</td>
-        <td><input type="radio" name="destiny" value="Dm" />dm</td>
-        <td><input type="radio" name="destiny" value="Cm" />cm</td>
-        <td><input type="radio" name="destiny" value="Mm" />mm</td>
-        <p><input type="button" value="Converter" onclick="converter(valor)" /></p>
-    </tr>
+    <form>
+        <table>
+            <tr>
+                <td colspan="8"><p>Escolha a base de origem:</p></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="origin" value="Km" />km</td>
+                <td><input type="radio" name="origin" value="Hm" />hm</td>
+                <td><input type="radio" name="origin" value="Dam" />dam</td>
+                <td><input type="radio" name="origin" value="M" />m</td>
+                <td><input type="radio" name="origin" value="Dm" />dm</td>
+                <td><input type="radio" name="origin" value="Cm" />cm</td>
+                <td><input type="radio" name="origin" value="Mm" />mm</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="7"><p>Digite o valor a ser transformado:</p></td>
+                <td><input type="text" name="valor" placeholder="Digite um valor.." required /></td>
+            </tr>
+            <tr>
+                <td colspan="8"><p>Escolha a base a que se queira transformar:</p></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="destiny" value="Kilo" />km</td>
+                <td><input type="radio" name="destiny" value="Hecto" />hm</td>
+                <td><input type="radio" name="destiny" value="Deca" />dam</td>
+                <td><input type="radio" name="destiny" value="Metros" />m</td>
+                <td><input type="radio" name="destiny" value="Deci" />dm</td>
+                <td><input type="radio" name="destiny" value="Centi" />cm</td>
+                <td><input type="radio" name="destiny" value="Mili" />mm</td>
+                <td><input type="button" value="Converter" onclick="converter(valor)" /></td>
+            </tr>
+        </table>
     </form>
     <hr />
     <p><b>Resultado:</b></p>
-    <p id="resultado"></p>
+    <p id="resultado"></p> <!-- Parágrafo que exibe o resultado -->
+    <!-- Explicação de como realizar o cálculo -->
     <p>A transformação de unidades de medida de comprimento é baseada na seguinte imagem:</p>
 
     <img
@@ -83,6 +96,7 @@
     </br>
     </br>
     <footer>
+        <!-- Rodapé da página -->
         Copyright &copy; 2019. All rights reserved.
     </footer>
 </body>

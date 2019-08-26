@@ -1,49 +1,40 @@
+
 function converter() {
+    var num = parseFloat(document.forms[0].valor.value);
     resultado = document.getElementById("resultado");
     origin = document.forms[0].origin.value;
-    destiny = document.forms[0].origin.value;
-    // alert ("origin = " + origin);
-    var num = parseFloat(document.forms[0].valor.value);
-    switch (origin) {
-        case 'Km':
-            km(num);
-            break;
-        case 'Hm':
+    destiny = document.forms[0].destiny.value;
+    if (origin == 'Km') {
+        km(num);
+    } else if (origin == 'Hm') {
 
-        case 'Dam':
+    } else if (origin == 'Dam') {
 
-        case 'M':
+    } else if (origin == 'M') {
 
-        case 'Dm':
+    } else if (origin == 'Dm') {
 
-        case 'Cm':
+    } else if (origin == 'Cm') {
 
-        case 'Mm':
+    } else {
 
     }
 }
 
 function km(num) {
-    switch (destiny) {
-        case 'Km':
-            resultado.innerHTML = (num + " Km é igual a " + num + "Km.");
-            break;
-        case 'Hm':
-            resultado.innerHTML = (num + " Km é igual a " + num / 10 + "Hm.");
-            break;
-        case 'Dam':
-            resultado.innerHTML = (num + " Km é igual a " + num / 100 + "Dam.");
-            break;
-        case 'M':
-            resultado.innerHTML = (num + " Km é igual a " + num / 1000 + "M.");
-            break;
-        case 'Dm':
-            resultado.innerHTML = (num + " Km é igual a " + num / 10000 + "Dm.");
-            break;
-        case 'Cm':
-            resultado.innerHTML = (num + " Km é igual a " + num / 100000 + "Cm.");
-            break;
-        case 'Mm':
-            resultado.innerHTML = (num + " Km é igual a " + num / 1000000 + "Mm.");
+    if (destiny == 'Kilo') {
+        resultado.innerHTML = (num + " Km é igual a " + num + "Km.");
+    } else if (destiny == 'Hecto') {
+        resultado.innerHTML = (num + " Km é igual a " + num / 10 + "Hm.");
+    } else if (destiny == 'Deca') {
+        resultado.innerHTML = (num + " Km é igual a " + num / 100 + "Dam.");
+    } else if (destiny == 'Metros') {
+        resultado.innerHTML = (num + " Km é igual a " + num / 1000 + "M.");
+    } else if (destiny == 'Deci') {
+        resultado.innerHTML = (num + " Km é igual a " + num / 10000 + "Dm.");
+    } else if (destiny == 'Centi') {
+        resultado.innerHTML = (num + " Km é igual a " + num / 100000 + "Cm.");
+    } else {
+        resultado.innerHTML = (num + " Km é igual a " + num / 1000000 + "Mm.");
     }
 }

@@ -3,26 +3,28 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Contas Básicas</title>
-  <script>
-    function somando() {
-      var a1 = parseFloat(document.forms[0].a.value);
-      var b1 = parseFloat(document.forms[0].b.value);
+  <meta charset="UTF-8" /> <!-- Permite a utilização de qualquer idioma na página -->
+  <title>Contas Básicas</title> <!-- Nome da aba -->
+  <script>//inicialização do javascript
+    function somando() // Criando a função que vai ser chamada se o botão for clicado no html.
+    {
+      var a1 = parseFloat(document.forms[0].a.value); // Declaro uma variável a1 e atribuo a ela o valor lido na caixa de texto de value "a" do html.
+      var b1 = parseFloat(document.forms[0].b.value); // Declaro uma variável b1 e atribuo a ela o valor lido na caixa de texto de value "b" do html.
 
-      var result = a1 + b1;
+      var result = a1 + b1; // Declaro uma variável resul e atribuo a ela o valor da soma de a1 mais b1.
 
-      document.getElementById("soma").innerHTML = (a1 + " somado com " + b1 + " resulta: " + result);
+      document.getElementById("soma").innerHTML = (a1 + " somado com " + b1 + " resulta: " + result); // Imprimo na tela o valor de a1, o valor de b1 e o valor de resul.
     }
-  </script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  </script> <!--finalizando do javascript -->
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- CSS da página -->
 </head>
 
 <body>
   <header>
-    <h1>34SYM4TH</h1>
+    <h1>34SYM4TH</h1> <!-- Titulo da página -->
   </header>
-  <nav>
+  <nav> <!-- área de navegação -->
+    <!-- abaixo tem-se as linkagens que levam a outras páginas -->
     | <a href="index.html">Página Inicial</a> |
     <a href="geometriaPlana.html">Geometria Plana</a> |
     <a href="contasbasicas.html">Contas Básicas</a> |
@@ -32,10 +34,11 @@
     <a href="sobre_nos.html">Sobre nós</a> |
     <a href="contato.html">Contato</a> |
   </nav>
-  <h2>Contas básicas - Adição</h2>
-  <hr>
-  <form>
+  <h2>Contas básicas - Adição</h2> <!--Subtítulo da página -->
+  <hr> <!-- nova secção da página -->
+  <form> <!-- os dados serão enviados para o javascript -->
     <p>
+      <!-- breve explicação de como se realiza a adição -->
       <li><strong>Explicação: </strong> É a combinação de números em um só.
     </p>
     <p>
@@ -43,10 +46,10 @@
         partes dos algarismos.
     </p>
     <p>Digite duas entradas:</p>
-    <input type="text" name="a" /> </br></br>
+    <input type="text" name="a" /> </br></br> <!-- inserção de caixa de texto -->
     <input type="text" name="b" /> </br></br>
 
-    <input type="button" value="Somar" onclick="somando(a, b)" />
+    <input type="button" value="Somar" onclick="somando(a, b)" /> <!-- Chama a função do JavaScript se o botão for clicado-->
     <p id="soma"></p>
   </form>
   <hr>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Equações</title>
+    <script src = "segundo.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- inclui o css -->
+</head>
+
+<body>
+    <header> 
+        <h1>34SYM4TH</h1>
+    </header>
+    
+    <nav> <!-- Barra de Navegação (permite a fácil mobilidade entre as páginas por meio dos links delas)-->
+        <a href="#">Página Inicial</a> |
+        <a href="#">Geometria Plana</a> |
+        <a href="#">Geometria Espacial</a> |
+        <a href="#">Contas Básicas</a> |
+        <a href="conversaoBases.html">Conversões Numéricas</a> |
+        <a href="#">Conversão de unidades</a> |
+        <a href="equacoes.html">Equações</a> |
+        <a href="#">Sobre nós</a> |
+        <a href="#">Contato</a> |
+    </nav>
+
+    <h2>Cálculo de Equações de Segundo Grau</h2> 
+        <hr>
+        <p><strong>Digite a Equação no formato e ordem de: (<i>ax²+bx+c</i>)</strong></p>
+        <p>Por favor, digite <b>sem espaços</b> e inclua os <b>uns</b> e os <b>zeros</b>, caso hajam.</p>
+        <form>
+            <p id="coeficientes"></p>
+            <p id="delta"></p>
+            <p id="raizes"></p>
+            <p id="descricao1"></p>
+            <p id="descricao2"></p>
+
+            <input type="text" name="equacao" placeholder="Digite aqui a equação.." required />
+            <input type="button" value="Calcular raizes" onclick="calculo(equacao)" />
+        </form>
+        <hr/>
+        <tr>
+            <td><a href="primeiro.html"><h5>Ir à página de primeiro Grau</h5></a></td>
+        </tr>  
+        <br>
+        <footer>
+            Copyright &copy; 2019. All rights reserved.
+        </footer>
+</body>
+
+</html>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Conversão de Unidades - Temperatura</title>
+    <script src="temperatura.js"></script> <!-- Insira aqui o JavaScript -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--NÃO REMOVA! ISSO AQUI É PARA INCLUIR O CSS-->
+</head>
+
+<body>
+    <header>
+        <!-- O cabeçalho da pagina -->
+        <h1>34SYM4TH</h1>
+    </header>
+    <nav>
+        | <a href="index.html">Página Inicial</a> |
+        <a href="geometriaPlana.html">Geometria Plana</a> |
+        <a href="contasbasicas.html">Contas Básicas</a> |
+        <a href="conversaoBases.html">Conversões Numéricas</a> |
+        <a href="conversaoUnidades.html">Conversão de unidades</a> |
+        <a href="equacoes.html">Equações</a> |
+        <a href="sobre_nos.html">Sobre nós</a> |
+        <a href="contato.html">Contato</a> |
+    </nav>
+    <h2>Conversão de Unidades - Temperatura</h2>
+    <hr />
+    <form>
+        <table>
+            <tr>
+                <td>Célsius</td>
+                <td>Fahrenheit</td>
+                <td>Kelvin</td>
+                <td>Valor:</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="origin" value="C" /></td>
+                <td><input type="radio" name="origin" value="F" /></td>
+                <td><input type="radio" name="origin" value="K" /></td>
+                <td><input type="text" name="valor" placeholder="Digite aqui o seu valor" required /></td>
+            </tr>
+            <tr>
+                <td>Célsius</td>
+                <td>Fahrenheit</td>
+                <td>Kelvin</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="destiny" value="Celsius" /></td>
+                <td><input type="radio" name="destiny" value="Fahrenheit" /></td>
+                <td><input type="radio" name="destiny" value="Kelvin" /></td>
+                <td><input type="button" value="Clique aqui" onclick="converter(valor)" /></td>
+            </tr>
+        </table>
+    </form>
+    <hr />
+    <p id="resultado"></p>
+    <h3>Célsius, Kelvin e Fahrenheit</h3>
+    <p>Existem 3 principais medidas de temperatura: Célsius, Fahrenheit e Kelvin, sendo as duas primeiras as mais usadas
+        no dia a dia e a última mais utilizada por cientistas.</p>
+    <p>A escala <b>Célsius</b> foi criada tendo como base a água; Ela atinge seu ponto de ebulição aos 100°C e congela
+        aos 0°C. </p>
+    <p>A escala <b>Fahrenheit</b> foi criada tendo como ponto 0 o ponto de congelamento de uma mistura de água e sal e o
+        como ponto máximo a temperatura de um homem sadio, nela a água congela aos 32°F e possui ponto de ebulição aos
+        212°F.</p>
+    <p>A escala <b>Kelvin</b>, criada baseada na menor temperatura que um corpo pode corrigir – algo em torno de -273°C
+        – é também conhecida como uma escala absoluta, pois é baseada num fenômeno da natureza, não em comparações, por
+        isso ao invés de “2 graus Kelvin” o correto é “2 Kevin”. Na escala Kelvin a água atinge o ponto de ebulição em
+        373 K e congela em 273 K.</p>
+    <p>Para converter de celsius para fahrenheit ou vice-versa são utilizadas as fórmulas:</p>
+    <p><var>C = (F-32)/1,8</var> ou <var>F = 1,8C+32</var></p>
+    <p>Para converter de Celsius para Kelvin ou vice-versa é utilizada a fórmula:</p>
+    <p><var>K= C+273</var></p>
+    <p>Para converter de Kelvin para Fahrenheit ou vice-versa, pode-se converter um para celsius e depois para a unidade
+        desejada, ou utilizar a seguinte fórmula:</p>
+    <p><var>(K-273)/5 = (F-32)/9</var></p>
+    <hr />
+    <footer>
+        Copyright &copy; 2019. All rights reserved.
+    </footer>
+</body>
+
+</html>

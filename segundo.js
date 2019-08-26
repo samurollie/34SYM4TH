@@ -1,8 +1,8 @@
 function checagem(a, b, c) {
-    if (a == 0) {
+    if (a == 0) { // Se a = 0, a equação não será do seguno grau.
         alert('Esta equação não é de segundo grau. Por favor digite outra.');
     } else {
-        document.getElementById("coeficientes").innerHTML = ("Coeficientes:</br>a = " + a + "</br>b = " + b + "</br>c = " + c + "<hr/>");
+        document.getElementById("coeficientes").innerHTML = ("Coeficientes:</br>a = " + a + "</br>b = " + b + "</br>c = " + c + "<hr/>"); // Mostra o coeficientes.
 
         if (a > 0) {
             document.getElementById("coeficientes").innerHTML = ("<br>Como na equação acima o <b>a</b> é positivo, seu gráfico será uma parábola com concavidade para <b>cima</b>.");

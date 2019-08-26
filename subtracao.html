@@ -3,26 +3,28 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Contas Básicas</title>
-  <script>
-    function subtraindo() {
-      var a1 = parseFloat(document.forms[0].a.value);
-      var b1 = parseFloat(document.forms[0].b.value);
+  <meta charset="UTF-8" /> <!-- Permite a utilização de qualquer idioma na página -->
+  <title>Contas Básicas</title> <!-- Nome da aba -->
+  <script> //inicialização do javascript
+    function subtraindo() // Criando a função que vai ser chamada se o botão for clicado no html.
+    {
+      var a1 = parseFloat(document.forms[0].a.value); // Declaro uma variável a1 e atribuo a ela o valor lido na caixa de texto de value "a" do html.
+      var b1 = parseFloat(document.forms[0].b.value); // Declaro uma variável b1 e atribuo a ela o valor lido na caixa de texto de value "b" do html.
 
-      var result = a1 - b1;
+      var result = a1 - b1; // Declaro uma variável resul e atribuo a ela o valor de a1 menos b1.
 
-      document.getElementById("menos").innerHTML = ("Resultado: " + result);
+      document.getElementById("menos").innerHTML = ("Resultado: " + result); // Imprimo na tela o valor de resul.
     }
-  </script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  </script> <!--finalizando do javascript -->
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- CSS da página -->
 </head>
 
 <body>
   <header>
-    <h1>34SYM4TH</h1>
+    <h1>34SYM4TH</h1> <!-- Titulo da página -->
   </header>
-  <nav>
+  <nav> <!-- área de navegação -->
+    <!-- abaixo tem-se as linkagens que levam a outras páginas -->
     | <a href="index.html">Página Inicial</a> |
     <a href="geometriaPlana.html">Geometria Plana</a> |
     <a href="contasbasicas.html">Contas Básicas</a> |
@@ -32,9 +34,10 @@
     <a href="sobre_nos.html">Sobre nós</a> |
     <a href="contato.html">Contato</a> |
   </nav>
-  <h2>Contas básicas - Subtração</h2>
-  <hr>
+  <h2>Contas básicas - Subtração</h2> <!--Subtítulo da página -->
+  <hr> <!-- nova secção da página -->
   <p>
+    <!-- breve explicação de como se realiza a subtração -->
     <li><strong>Explicação: </strong>O minuendo é o número do qual será
       retirado um valor. O subtraendo é o valor que será retirado do
       minuendo. O resultado é chamado de resto ou diferença.
@@ -52,13 +55,13 @@
       Caso o vizinho de três(3) fosse zero(0), o zero passaria a valer nove(9) e o três(3) passaria
       a valer treze(13) do mesmo jeito.
   </p>
-  <form>
+  <form> <!-- os dados serão enviados para o javascript -->
     <p>Digite o minuendo:</p>
-    <input type="text" name="a" /> </br>
+    <input type="text" name="a" /> </br> <!-- inserção de caixa de texto -->
     <p>Digite o subtraendo:</p>
     <input type="text" name="b" /> </br></br>
 
-    <input type="button" value="Subtrair" onclick="subtraindo(a, b)" />
+    <input type="button" value="Subtrair" onclick="subtraindo(a, b)" /> <!-- Chama a função do JavaScript se o botão for clicado-->
     <p id="menos"></p>
   </form>
   <hr>

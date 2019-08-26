@@ -3,25 +3,27 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Contas Básicas</title>
-  <script>
-    function radiciando() {
-      var a1 = parseFloat(document.forms[0].a.value);
+  <meta charset="UTF-8" /> <!-- Permite a utilização de qualquer idioma na página -->
+  <title>Contas Básicas</title> <!-- Nome da aba -->
+  <script> //inicialização do javascript
+    function radiciando() // Criando a função que vai ser chamada se o botão for clicado no html.
+    {
+      var a1 = parseFloat(document.forms[0].a.value); // Declaro uma variável a1 e atribuo a ela o valor lido na caixa de texto de value "a" do html.
 
-      var result = Math.sqrt(a1);
+      var result = Math.sqrt(a1); // Declaro uma variável resul e atribuo a ela o valor da raiz quadrada de a1.
 
-      document.getElementById("radic").innerHTML = ("A raiz quadrada de " + a1 + " é: " + result);
+      document.getElementById("radic").innerHTML = ("A raiz quadrada de " + a1 + " é: " + result); // Imprimo na tela o valor de a1 e o valor de resul.
     }
-  </script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  </script> <!--finalizando do javascript -->
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- CSS da página -->
 </head>
 
 <body>
   <header>
-    <h1>34SYM4TH</h1>
+    <h1>34SYM4TH</h1> <!-- Titulo da página -->
   </header>
-  <nav>
+  <nav> <!-- área de navegação -->
+    <!-- abaixo tem-se as linkagens que levam a outras páginas -->
     | <a href="index.html">Página Inicial</a> |
     <a href="geometriaPlana.html">Geometria Plana</a> |
     <a href="contasbasicas.html">Contas Básicas</a> |
@@ -31,17 +33,18 @@
     <a href="sobre_nos.html">Sobre nós</a> |
     <a href="contato.html">Contato</a> |
   </nav>
-  <h2>Contas básicas - Radiciação</h2>
-  <hr>
-  <form>
+  <h2>Contas básicas - Radiciação</h2> <!--Subtítulo da página -->
+  <hr> <!-- nova secção da página -->
+  <form> <!-- os dados serão enviados para o javascript -->
     <p>
+      <!-- breve explicação de como se realiza a radiciação -->
       <li><strong>Explicação: </strong> Será calculado, um número positivo,
         que quando multiplicado por ele mesmo, se iguala ao x.
     </p>
     <p>Digite o valor de x:</p>
-    <input type="text" name="a" /> </br></br>
+    <input type="text" name="a" /> </br></br> <!-- inserção de caixa de texto -->
 
-    <input type="button" value="Encontrar raiz" onclick="radiciando(a)" />
+    <input type="button" value="Encontrar raiz" onclick="radiciando(a)" /> <!-- Chama a função do JavaScript se o botão for clicado-->
     <p id="radic"></p>
   </form>
   <hr>

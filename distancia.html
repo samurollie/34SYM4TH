@@ -32,7 +32,9 @@
     <form>
         <table>
             <tr>
-                <td colspan="8"><p>Escolha a base de origem:</p></td>
+                <td colspan="8">
+                    <p>Escolha a base de origem:</p>
+                </td>
             </tr>
             <tr>
                 <td><input type="radio" name="origin" value="Km" />km</td>
@@ -45,11 +47,16 @@
                 <td></td>
             </tr>
             <tr>
-                <td colspan="7"><p>Digite o valor a ser transformado:</p></td>
+                <td colspan="7">
+                    <p>Digite o valor a ser transformado:</p>
+                </td>
                 <td><input type="text" name="valor" placeholder="Digite um valor.." required /></td>
+                <!-- Onde o usuário insere o valor -->
             </tr>
             <tr>
-                <td colspan="8"><p>Escolha a base a que se queira transformar:</p></td>
+                <td colspan="8">
+                    <p>Escolha a base a que se queira transformar:</p>
+                </td>
             </tr>
             <tr>
                 <td><input type="radio" name="destiny" value="Kilo" />km</td>
@@ -59,7 +66,7 @@
                 <td><input type="radio" name="destiny" value="Deci" />dm</td>
                 <td><input type="radio" name="destiny" value="Centi" />cm</td>
                 <td><input type="radio" name="destiny" value="Mili" />mm</td>
-                <td><input type="button" value="Converter" onclick="converter(valor)" /></td>
+                <td><input type="button" value="Converter" onclick="converter(valor)" /></td> <!-- Calcula -->
             </tr>
         </table>
     </form>
@@ -69,8 +76,7 @@
     <!-- Explicação de como realizar o cálculo -->
     <p>A transformação de unidades de medida de comprimento é baseada na seguinte imagem:</p>
 
-    <img
-        src="https://raw.githubusercontent.com/samurollie/34SYM4TH/samuel/comprimento.jpg?token=ALPPYHZQU76ERXE6PIGDRFK5NRZEE" />
+    <img src="https://raw.githubusercontent.com/samurollie/34SYM4TH/samuel/comprimento.jpg?token=ALPPYHZQU76ERXE6PIGDRFK5NRZEE" />
 
     <h6><a href="https://mundoeducacao.bol.uol.com.br/matematica/unidades-medida-comprimento.htm">imagem linkada deste
             site</a></h6>
